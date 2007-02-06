@@ -1,0 +1,14 @@
+citHeader("To cite package 'PresenceAbsence' in publications use:")
+
+citEntry(	entry="Manual",
+  		title = "PresenceAbsence: An R Package for Presence-Absence Model Evaluation",
+  		author = personList(as.person("Elizabeth Freeman")),
+ 	 	year = "2007",
+  		organization = "USDA Forest Service, Rocky Mountain Research Station",
+  		address      = "507 25th street, Ogden, UT, USA",
+  		note         = "eafreeman@fs.fed.us",
+  		textVersion =  paste(	"Freeman, Elizabeth (2007). ",
+					"PresenceAbsence: An R Package for Presence-Absence Model Evaluation. ",
+					"USDA Forest Service, Rocky Mountain Research Station, ",
+					"507 25th street, Ogden, UT, USA. ",
+   					sep=""))
