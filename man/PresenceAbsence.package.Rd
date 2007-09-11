@@ -12,8 +12,8 @@ This package provides a set of functions useful when evaluating the results of p
 \tabular{ll}{
 Package: \tab PresenceAbsence\cr
 Type: \tab Package\cr
-Version: \tab 2.4\cr
-Date: \tab 2005-12-08\cr
+Version: \tab 1.1.0\cr
+Date: \tab 2007-09-11\cr
 License: \tab This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.\cr
 }
 This library provides a collection of functions useful for evaluating Presence/Absence data, both analytically as well as graphically. It also includes a function that uses beta distributions to produce simulated Presence/Absence data.
@@ -35,6 +35,8 @@ Functions that will only work on single models: \link{cmx}, \link{auc}, \link{ro
 Functions that will work with multiple models: \link{presence.absence.accuracy}, \link{optimal.thresholds}, \link{predicted.prevalence}, and \link{auc.roc.plot}.
 
 Note that this library provides graphical and tabular comparisons between models. It does not provide significance testing of model differences. The standard deviations given by \link{presence.absence.accuracy} are for each model individually. To test AUC for differences between models it is necessary to account for correlation. If you are interested in AUC significance testing, both pair-wise and overall, the Splus ROC library from Mayo clinic provides such a test. See \link{auc} for more details.
+
+This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.
 }
 \author{
 Author:Elizabeth Freeman <eafreeman@fs.fed.us>

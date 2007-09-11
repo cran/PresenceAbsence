@@ -74,45 +74,49 @@ if(is.logical(na.rm)==FALSE){
 	  rm(DATA)
 
 ### continue auc calculations
-        x1 <- (PRED[OBS==1])
-        x0 <- (PRED[OBS==0])
-        num1 <- sum(OBS)
-        num0 <- length(OBS) - sum(OBS)
-        eps <- 10^(-16)
-        rm(PRED)
-        rm(OBS)
+     	PRED.0<-PRED[OBS==0]
+	PRED.1<-PRED[OBS==1]
 
-### creates num0 by num1 matrix
-          diffarray <- outer(x1,rep(1,num0)) - outer(rep(1,num1),x0)
-          rm(x1)
-          rm(x0)
-          countmat <- sum(diffarray>eps) + 0.5*sum(abs(diffarray)<=eps)
+	N<-length(PRED)
+	n0<-as.double(length(PRED.0))
+	n1<-as.double(length(PRED.1))
 
-### note: Mann-Whitney U statistic is equal to (num1*num0) - countmat   
-  
-        area <- countmat/(num1*num0)
-        area[area<.5] <- 1 - (countmat/(num1*num0))[area<.5]
-        rm(countmat)
+	# overall ranks
+	R<-rank(PRED,ties.method = "average")
+	R0<-R[OBS==0]
+	R1<-R[OBS==1]
+
+	U<-n0*n1 + (n0*(n0+1))/2 - sum(R0)
+
+	AUC<-U/(n0*n1)
+	AUC[AUC<.5]<-1-AUC
+       
+	rm(PRED)
+      rm(OBS)
+
   
   if(st.dev==FALSE){
-		return(auc=area)
+		return(AUC=AUC)
    }else{
 
-###Calculate the S matrix
-       countmtx <- (sign(diffarray)+1)/2
-       rm(diffarray)
-       V.x1 <- apply(countmtx,1,sum)/num0
-       V.x0 <- apply(countmtx,2,sum)/num1
-       rm(countmtx)
-     	 S.1 <- var(V.x1)
-       rm(V.x1)
-     	 S.0 <- var(V.x0)
-       rm(V.x0)
-     	 S <- (S.1/num1) + (S.0/num0)
 ###Calculate the standard error of the area under the curve
-   	 var.area <- S
-   	 se.area <- sqrt(var.area)
+   	
+	# ranks within 0's and 1's
+	RR0<-rank(PRED.0,ties.method = "average")
+	RR1<-rank(PRED.1,ties.method = "average")
 
-       return(data.frame(AUC=area,AUC.sd=se.area))}
+	# percentage of PRED.1 less than each PRED.0
+	pless.0<-(R0-RR0)/n1 
+
+	# percentage of PRED.0 less than each PRED.1
+	pless.1<-(R1-RR1)/n0 
+
+	var.0<-var(pless.0)
+	var.1<-var(pless.1)
+
+	var.AUC<-(var.0/n0) + (var.1/n1)
+	st.dev.AUC<-var.AUC^.5
+
+      return(data.frame(AUC=AUC,AUC.sd=st.dev.AUC))}
 }
 
