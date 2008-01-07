@@ -42,7 +42,9 @@ If all the bins lie above the diagonal, or all the bins lie below the diagonal, 
 \value{
 creates a graphical plot }
 \references{ 
-Vaughan, I. P., Ormerod, S. J., The continuing challenges of testing species distribution models.  J. Appl. Ecol., 42:720-730.
+Vaughan, I. P., Ormerod, S. J. 2005. The continuing challenges of testing species distribution models.  J. Appl. Ecol., 42:720-730.
+
+Reineking, B. and \enc{Schröder}{Schroder}, B. 2006. Constrain to perform: regularization of habitat models. Ecological Modelling 193: 675-690.
  }
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
 \note{ 
@@ -64,3 +66,4 @@ calibration.plot(	DATA=SIM3DATA,
 			main=NULL)
 }
 \keyword{ models } 
+\encoding{latin1}

@@ -12,8 +12,8 @@ This package provides a set of functions useful when evaluating the results of p
 \tabular{ll}{
 Package: \tab PresenceAbsence\cr
 Type: \tab Package\cr
-Version: \tab 1.1.0\cr
-Date: \tab 2007-09-11\cr
+Version: \tab 1.1.1\cr
+Date: \tab 2008-01-07\cr
 License: \tab This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.\cr
 }
 This library provides a collection of functions useful for evaluating Presence/Absence data, both analytically as well as graphically. It also includes a function that uses beta distributions to produce simulated Presence/Absence data.

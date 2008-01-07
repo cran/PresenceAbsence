@@ -241,6 +241,7 @@ if(obs.prev==1){
 				line.type=FALSE,
 				add.legend=add.legend,
 				add.opt.legend=add.opt.legend,
+				legend.cex=legend.cex,
 				opt.legend.cex=opt.legend.cex,
 				FPC=FPC,FNC=FNC,
 				cost.line=cost.line)
