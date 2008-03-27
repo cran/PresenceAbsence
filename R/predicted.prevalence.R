@@ -1,5 +1,5 @@
 
-predicted.prevalence<-function(DATA,threshold=.5,which.model=(1:(ncol(DATA)-2)),na.rm=FALSE){
+predicted.prevalence<-function(DATA,threshold=.5,which.model=(1:N.models),na.rm=FALSE){
 ### Calculates the observed and predicted prevalence for the species
 ### Function will work for one model and multiple thresholds, or one threshold
 ### and multiple models, or multiple models and multiple thresholds.
@@ -47,10 +47,13 @@ if(is.logical(na.rm)==FALSE){
 	DATA[DATA[,2]>0,2]<-1
 
 ### Check that if 'which.model' is specified, it is an integer and not greater than number of models in DATA
-		if(min(which.model)<1 || sum(round(which.model)!=which.model)!=0){
-			stop("values in 'which.model' must be positive integers")}
-		if(max(which.model)+2 > ncol(DATA)){
-			stop("values in 'which.model' must not be greater than number of models in 'DATA'")}
+
+	N.models<-ncol(DATA)-2
+
+	if(min(which.model)<1 || sum(round(which.model)!=which.model)!=0){
+		stop("values in 'which.model' must be positive integers")}
+	if(max(which.model) > N.models){
+		stop("values in 'which.model' must not be greater than number of models in 'DATA'")}
 
 ### Pull out data from 'which.model' model
 
@@ -82,8 +85,8 @@ if(is.logical(na.rm)==FALSE){
 
 	PREVALENCE<-data.frame(matrix(0,N.thresh,N.dat+2))
 	names(PREVALENCE)<-c(	"threshold",
-					"Obs.Prevalence",
-					if(is.null(names(DATA))==FALSE){names(DATA)[-c(1,2)]}else{paste("Model",1:N.models)})
+				"Obs.Prevalence",
+				if(is.null(names(DATA))==FALSE){names(DATA)[-c(1,2)]}else{paste("Model",1:N.models)[which.model]})
 
 	PREVALENCE[,1]<-threshold
 	PREVALENCE[,2]<-rep(Prev.observed,N.thresh)

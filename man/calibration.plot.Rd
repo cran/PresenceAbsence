@@ -40,15 +40,31 @@ If all the bins lie above the diagonal, or all the bins lie below the diagonal, 
 
 }
 \value{
-creates a graphical plot }
+creates a graphical plot 
+
+returns a dataframe of information about the bins where:
+\tabular{lll}{
+  \code{[,1]} \tab \code{BinCenter} \tab center of bin \cr
+  \code{[,2]} \tab \code{NBin} \tab Number of plots in Bin \cr
+  \code{[,3]} \tab \code{BinObs} \tab Proportion of Bin observed as Present \cr
+  \code{[,4]} \tab \code{BinPred} \tab Average prediction for Bin \cr
+  \code{[,5]} \tab \code{BinObsCIlower} \tab Lower bound of confidence Interval for \code{BinObs} \cr
+  \code{[,6]} \tab \code{BinObsCIupper} \tab Upper bound of confidence Interval for \code{BinObs}  \cr}
+
+}
+
+\note{ 
+}
+
+\author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
+
 \references{ 
 Vaughan, I. P., Ormerod, S. J. 2005. The continuing challenges of testing species distribution models.  J. Appl. Ecol., 42:720-730.
 
 Reineking, B. and \enc{Schröder}{Schroder}, B. 2006. Constrain to perform: regularization of habitat models. Ecological Modelling 193: 675-690.
  }
-\author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
-\note{ 
-}
+
+
 \seealso{ \link{presence.absence.summary}, \link{presence.absence.hist} }
 \examples{
 data(SIM3DATA)

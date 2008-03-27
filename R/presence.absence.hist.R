@@ -113,11 +113,13 @@ if(length(smoothing)!=1){
 
 ### Check that 'which.model' is a single integer and not greater than number of models in DATA ###
 
+	N.models<-ncol(DATA)-2
+
 	if(length(which.model)!=1){
 		stop("this function will only work for a single model, 'which.model' must be of length one")}
 	if(which.model<1 || round(which.model)!=which.model){
 		stop("'which.model' must be a positive integer")}
-	if(which.model+2 > ncol(DATA)){
+	if(which.model > N.models){
 		stop("'which.model' must not be greater than number of models in 'DATA'")}
 
 ###check length of model.names matches number of models, if needed, generate model names ###
@@ -126,7 +128,7 @@ if(length(smoothing)!=1){
 		model.names<-if(is.null(names(DATA))==FALSE){names(DATA)[-c(1,2)]}else{paste("Model",1:N.models)}
 	}
 
-	if(ncol(DATA)-2!=length(model.names) && (length(which.model) != 1 || length(model.names) != 1)){
+	if(N.models!=length(model.names) && (length(which.model) != 1 || length(model.names) != 1)){
 		stop(	"If 'model.names' is specified it must either be a single name, or a vector",
 			"of the same length as the number of model predictions in 'DATA'")}	
 

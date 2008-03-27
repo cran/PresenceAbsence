@@ -39,8 +39,8 @@ calibration.plot<-function(	DATA,
 
 ### check logicals
 
-if(is.logical(na.rm)==FALSE){
-	stop("'na.rm' must be of logical type")}
+	if(is.logical(na.rm)==FALSE){
+		stop("'na.rm' must be of logical type")}
 
 ### check for and deal with NA values:
 
@@ -54,12 +54,15 @@ if(is.logical(na.rm)==FALSE){
 
 ### Check that 'which.model' is a single integer and not greater than number of models in DATA
 
+	N.models<-ncol(DATA)-2
+
 	if(length(which.model)!=1){
 		stop("this function will only work for a single model, 'which.model' must be of length one")}
 	if(which.model<1 || round(which.model)!=which.model){
 		stop("'which.model' must be a positive integer")}
-	if(which.model+2 > ncol(DATA)){
+	if(which.model > N.models){
 		stop("'which.model' must not be greater than number of models in 'DATA'")}
+
 
 ###check length of model.names matches number of models, if needed, generate model names
 
@@ -135,8 +138,8 @@ if(is.logical(na.rm)==FALSE){
 	df1.up<-2*(N.presence+1)
 	df2.up<-2*(N.total-N.presence)
 
-	Lower<-rep(0,10)
-	Upper<-rep(1,10)
+	Lower<-rep(0,N.bins)
+	Upper<-rep(1,N.bins)
 
 	TF<-N.presence!=0 #a true/false vector of bins that should have a lower bound greater than zero.
 	Lower[TF]<-N.presence[TF]/
@@ -159,6 +162,23 @@ if(is.logical(na.rm)==FALSE){
 
 ###restore original parameters###
 	par(op)
+
+###find average prediction per bin###
+
+	BinPred<-tapply(DATA[,3],DATA.breaks,mean)
+
+
+###create output dataframe###
+
+	output<-data.frame(	BinCenter=bin.centers,
+					NBin=N.total,
+					BinObs=OBS.proportion,
+					BinPred=BinPred,
+					BinObsCIlower=Lower,
+					BinObsCIupper=Upper)
+
+	return(output)
+
 }
 
 

@@ -5,7 +5,7 @@
  \code{ predicted.prevalence } calculates the observed prevalence and predicted prevalence for one or models at one or more thresholds.
 }
 \usage{
-predicted.prevalence(DATA, threshold = 0.5, which.model = (1:(ncol(DATA) - 2)), na.rm = FALSE)
+predicted.prevalence(DATA, threshold = 0.5, which.model = (1:N.models), na.rm = FALSE)
 }
 \arguments{
     \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:
