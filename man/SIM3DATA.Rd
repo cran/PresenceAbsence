@@ -17,7 +17,7 @@ This data set was generated using the \code{presence.absence.simulation()} funct
   }
 }
 \source{
-  simulated with the \link{presence.absence.simulation} function . See \code{Example 2} frpm link{presence.absence.simulation} help file for more details.
+  simulated with the \link{presence.absence.simulation} function . See \code{Example 2} from \link{presence.absence.simulation} help file for more details.
 }
 \examples{
 data(SIM3DATA)

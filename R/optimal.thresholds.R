@@ -75,6 +75,14 @@ POSSIBLE.meth<-c(	"Default",
 			"ReqSpec",
 			"Cost")
 
+### Special Case: 'DATA'=NULL , returns list of possible thresholds
+
+if(is.null(DATA)==TRUE){
+	return(POSSIBLE.meth)
+}else{
+
+### 'DATA!=NULL
+
 if(is.null(opt.methods)==TRUE){
 	opt.methods<-POSSIBLE.meth}
 
@@ -107,9 +115,7 @@ if("Cost"%in%opt.methods){
 		FNC<-1}
 	if(FPC<=0 || FNC<=0){stop("costs must be positive")}}
 
-### Special Case: 'DATA'=NULL , returns list of possible thresholds
 
-if(is.null(DATA)==TRUE){return(POSSIBLE.meth)}
 
 ### checking 'smoothing' ###
 
@@ -274,5 +280,5 @@ for(dat in 1:N.dat){
 }
 OPT.THRESH<-cbind(Method=opt.methods,OPT.THRESH)
 return(OPT.THRESH)
-}
+}}
 		

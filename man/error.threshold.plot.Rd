@@ -38,7 +38,8 @@ error.threshold.plot(DATA, threshold = 101, which.model = 1, na.rm = FALSE, xlab
   8 \tab \code{MeanProb } \tab mean predicted probability \cr 
   9  \tab \code{MinROCdist}\tab minimizes distance between ROC plot and (0,1)\cr
   10 \tab \code{ReqSens} \tab user defined required sensitivity \cr
-  11 \tab \code{ReqSpec} \tab user defined required specificity }}
+  11 \tab \code{ReqSpec} \tab user defined required specificity \cr
+  12 \tab \code{Cost} \tab user defined relative costs ratio }}
   \item{req.sens}{a value between zero and one giving the user defined required sensitivity. Only used if \code{opt.thresholds} = \code{TRUE}. Note that \code{req.sens} = (1-maximum allowable errors for points with positive observations).}
   \item{req.spec}{a value between zero and one giving the user defined required sspecificity. Only used if \code{opt.thresholds} = \code{TRUE}. Note that \code{req.sens} = (1- maximum allowable errors for points with negative observations).}  
   \item{obs.prev}{observed prevalence for \code{opt.method} = \code{"PredPrev=Obs"} and \code{"ObsPrev"}. Defaults to observed prevalence from \code{DATA}.}
@@ -71,7 +72,7 @@ Note: if too many methods are included in \code{opt.methods}, the graph will get
 \value{
 If \code{plot.it} = \code{TRUE} creates a graphical plot.
 
-If \code{FIND.THRESH} = \code{TRUE}, returns a dataframe of information about the optimal thresholds where:
+If \code{opt.thresholds} = \code{TRUE}, returns a dataframe of information about the optimal thresholds where:
 \tabular{lll}{
   \code{[,1]} \tab \code{legend.names} \tab type of optimal threshold \cr
   \code{[,2]} \tab \code{threshold} \tab optimal threshold\cr
