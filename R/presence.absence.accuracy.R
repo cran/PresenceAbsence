@@ -70,6 +70,11 @@ if(is.logical(na.rm)==FALSE){
 
 	DATA<-DATA[,c(1,2,which.model+2)]
 
+### check for names ###
+
+	N.models<-ncol(DATA)-2
+	model.names<-if(is.null(names(DATA))){paste("Model",1:N.models)}else{names(DATA)[-c(1,2)]}
+
 ###check that length(threshold) matches number of models###
 	
 	N.thr<-length(threshold)
@@ -106,7 +111,7 @@ if(is.logical(na.rm)==FALSE){
 		if(st.dev==FALSE){
 			ERROR<-data.frame(matrix(0,N.dat,7))
 			names(ERROR)<-c(	"model","threshold","PCC","sensitivity","specificity","Kappa","AUC")
-			ERROR[,1]<-names(DATA)[-c(1,2)]
+			ERROR[,1]<-model.names
 			ERROR[,2]<-threshold
 
 			for(dat in 1:N.dat){
@@ -125,7 +130,7 @@ if(is.logical(na.rm)==FALSE){
 			names(ERROR)<-c(	"model","threshold",
 						"PCC","sensitivity","specificity","Kappa","AUC",
 						"PCC.sd","sensitivity.sd","specificity.sd","Kappa.sd","AUC.sd")
-			ERROR[,1]<-names(DATA)[-c(1,2)]
+			ERROR[,1]<-model.names
 			ERROR[,2]<-threshold
 
 			for(dat in 1:N.dat){
@@ -143,7 +148,7 @@ if(is.logical(na.rm)==FALSE){
 		if(st.dev==FALSE){
 			ERROR<-data.frame(matrix(0,N.thr,7))
 			names(ERROR)<-c(	"model","threshold","PCC","sensitivity","specificity","Kappa","AUC")
-			ERROR[,1]<-names(DATA)[-c(1,2)]
+			ERROR[,1]<-model.names
 			ERROR[,2]<-threshold
 
 			for(thresh in 1:N.thr){
@@ -161,7 +166,7 @@ if(is.logical(na.rm)==FALSE){
 			names(ERROR)<-c(	"model","threshold",
 						"PCC","sensitivity","specificity","Kappa","AUC",
 						"PCC.sd","sensitivity.sd","specificity.sd","Kappa.sd","AUC.sd")
-			ERROR[,1]<-names(DATA)[-c(1,2)]
+			ERROR[,1]<-model.names
 			ERROR[,2]<-threshold
 
 			for(thresh in 1:N.thr){

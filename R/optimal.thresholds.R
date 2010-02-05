@@ -83,6 +83,9 @@ if(is.null(DATA)==TRUE){
 
 ### 'DATA!=NULL
 
+
+### check opt.methods ###
+
 if(is.null(opt.methods)==TRUE){
 	opt.methods<-POSSIBLE.meth}
 

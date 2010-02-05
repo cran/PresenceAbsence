@@ -2,7 +2,7 @@
 \alias{predicted.prevalence}
 \title{ Predicted Prevalence }
 \description{
- \code{ predicted.prevalence } calculates the observed prevalence and predicted prevalence for one or models at one or more thresholds.
+ \code{ predicted.prevalence } calculates the observed prevalence and predicted prevalence for one or more models at one or more thresholds.
 }
 \usage{
 predicted.prevalence(DATA, threshold = 0.5, which.model = (1:N.models), na.rm = FALSE)

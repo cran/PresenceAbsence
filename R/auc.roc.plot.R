@@ -103,6 +103,17 @@ auc.roc.plot<-function(	DATA,
 ###	pch			point type for marking specific thresholds
 
 
+### check data format ###
+
+if(is.data.frame(DATA)==FALSE){
+	if(is.matrix(DATA)==TRUE){
+		DATA<-as.data.frame(DATA)
+	}else{
+		stop("'DATA' must be either data frame or matrix")
+	}
+}
+
+
 ### check if AUC even exists ###
 
 OBS<-DATA[,2]
