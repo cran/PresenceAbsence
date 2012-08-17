@@ -99,7 +99,7 @@ S. Manel, H.C. Williams, and S.J. Ormerod. Evaluating presence-absence models in
 K.A. Wilson, M.I. Westphal, H.P. Possingham. and J. Elith. Sensitivity of conservation planning to different approaches to using predicted species distribution data. Biological Conservation, 22(1):99-112, 2004.
 }
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ }
+
 \seealso{ \link{error.threshold.plot}, \link{presence.absence.accuracy}, \link{roc.plot.calculate}, \link{presence.absence.summary} }
 \examples{
 data(SIM3DATA)

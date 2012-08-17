@@ -53,8 +53,6 @@ returns a dataframe of information about the bins where:
 
 }
 
-\note{ 
-}
 
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
 

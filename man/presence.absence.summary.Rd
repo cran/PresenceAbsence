@@ -57,10 +57,9 @@ presence.absence.summary(DATA, threshold = 101, find.auc = TRUE, which.model = 1
 }
 \value{
 creates a graphical plot}
-\references{  }
+
 \author{Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{\link{optimal.thresholds}, \link{error.threshold.plot}, \link{auc.roc.plot}, \link{calibration.plot}, \link{presence.absence.hist}}
 \examples{
 data(SIM3DATA)

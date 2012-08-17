@@ -6,14 +6,14 @@
 Presence-Absence model evaluation 
 }
 \description{
-This package provides a set of functions useful when evaluating the results of presence-absence models. Package includes functions for calculating threshold dependant measures such as confusion matrices, pcc, sensitivity, specificity, and Kappa, and produces plots of each measure as the threshold is varied. It also includes functions to plot the threshold independent ROC curves along with the associated AUC (area under the curve).
+This package provides a set of functions useful when evaluating the results of presence-absence models. Package includes functions for calculating threshold dependent measures such as confusion matrices, pcc, sensitivity, specificity, and Kappa, and produces plots of each measure as the threshold is varied. It also includes functions to plot the threshold independent ROC curves along with the associated AUC (area under the curve).
 }
 \details{
 \tabular{ll}{
 Package: \tab PresenceAbsence\cr
 Type: \tab Package\cr
-Version: \tab 1.1.5\cr
-Date: \tab 2010-06-12\cr
+Version: \tab 1.1.9\cr
+Date: \tab 2012-08-17\cr
 License: \tab This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.\cr
 }
 This library provides a collection of functions useful for evaluating Presence/Absence data, both analytically as well as graphically. It also includes a function that uses beta distributions to produce simulated Presence/Absence data.
@@ -51,7 +51,7 @@ Manel, S., Ceri Williams, H., and Ormerod, S.J., 2001. Evaluating presence/absen
 Moisen, G.G., Freeman, E.A., Blackard, J.A., Frescino, T.S., Zimmerman N.E., Edwards, T.C. Predicting tree species presence and basal area in Utah: A comparison of stochastic gradient boosting, generalized additive models, and tree-based methods. Ecological Modellng, 199 (2006) 176-187.
 }
 \keyword{ package }
-\seealso{ }
+
 \examples{
 data(SIM3DATA)
 auc.roc.plot(SIM3DATA)

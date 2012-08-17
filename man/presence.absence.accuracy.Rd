@@ -58,10 +58,9 @@ Depending on the size of the dataset and the speed of the computer this function
 }
   if \code{find.auc} = FALSE, then columns for \code{AUC} and \code{AUC.sd} are not returned.
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{
-}
+
 \seealso{ 
 \code{\link{cmx}}, \code{\link{pcc}}, \code{\link{sensitivity}}, \code{\link{specificity}}, \code{\link{Kappa}}, \code{\link{auc}}
 }

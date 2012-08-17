@@ -65,10 +65,9 @@ Note: if too many methods are included in \code{opt.methods}, the graph will get
 \value{
   creates a graphical plot 
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ \link{optimal.thresholds},\link{presence.absence.summary} }
 \examples{
 data(SIM3DATA)

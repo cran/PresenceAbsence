@@ -36,10 +36,9 @@ Returns a dataframe where:
 [,4] \tab \code{specificity} \tab                                           \cr
 [,5] \tab \code{Kappa}       \tab                                           }
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ 
 \link{cmx}, \link{pcc}, \link{sensitivity}, \link{specificity}, \link{Kappa}, \link{presence.absence.accuracy}, \link{error.threshold.plot}, \link{auc.roc.plot}
 }

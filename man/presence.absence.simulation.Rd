@@ -37,10 +37,9 @@ The overall mean probability should be approximately equal to the prevalence. In
 	\item{column 3}{\code{Predicted 1} - predicted probabilities for model 1}
 	\item{column 4}{\code{Predicted 2} - predicted probabilities for model 2, etc...}
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
 
-\seealso{  }
 \examples{
 ### EXAMPLE 1 ###
 ### a graph illustrating effect of shape parameters on beta distribution

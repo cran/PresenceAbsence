@@ -69,10 +69,9 @@ Note: if too many methods are included in \code{opt.methods}, the graph will get
 }
 \value{
 creates a graphical plot}
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ \link{optimal.thresholds},\link{presence.absence.accuracy}, \link{roc.plot.calculate}, \link{error.threshold.plot}, \link{presence.absence.summary} }
 \examples{
 

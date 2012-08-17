@@ -22,10 +22,9 @@ Sensitivity is the proportion of observed positives correctly predicted, and ref
 [1,1] \tab \code{sensitivity}   \tab                                         \cr
 [1,2] \tab \code{sensitivity.sd}\tab standard deviation of \code{sensitivity} }
 }
-\references{ }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}}
-\note{ 
-}
+
 \seealso{ \code{\link{cmx}}, \code{\link{pcc}}, \code{\link{specificity}}, \code{\link{Kappa}}, \code{\link{auc}} }
 \examples{
 data(SIM3DATA)

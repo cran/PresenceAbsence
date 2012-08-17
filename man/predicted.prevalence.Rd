@@ -29,11 +29,9 @@ returns a dataframe where:
 [,3] \tab \code{Model 1} \tab Predicted prevalence for first model\cr
 [,4] \tab \code{Model 2} \tab Predicted prevalence for second model, etc...}
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
-\note{ 
-}
-\seealso{  }
+
 \examples{
 data(SIM3DATA)
 

@@ -81,10 +81,9 @@ If \code{opt.thresholds} = \code{TRUE}, returns a dataframe of information about
   \code{[,5]} \tab \code{specificity} \tab at that threshold \cr
   \code{[,6]} \tab \code{Kappa} \tab at that threshold \cr}
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us}  }
-\note{ 
-}
+
 \seealso{ \link{optimal.thresholds}, \link{presence.absence.accuracy}, \link{roc.plot.calculate}, \link{presence.absence.summary} }
 \examples{
 

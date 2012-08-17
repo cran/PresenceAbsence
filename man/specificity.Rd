@@ -23,10 +23,9 @@ Specificity is the proportion of observed negatives correctly predicted, and ref
 [1,1] \tab \code{specificity}   \tab                                         \cr
 [1,2] \tab \code{specificity.sd}\tab standard deviation of \code{specificity} }
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ \code{\link{cmx}}, \code{\link{pcc}}, \code{\link{sensitivity}}, \code{\link{Kappa}}, \code{\link{auc}} }
 \examples{
 data(SIM3DATA)

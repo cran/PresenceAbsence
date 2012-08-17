@@ -43,8 +43,7 @@ DeLong, E.R., Delong, D.M. and Clarke-Pearson, D.L., 1988. Comparing areas under
 Splus ROC library developed by Beth Atkinson and Doug Mahoney at the Mayo Clinic is available at: \url{http://mayoresearch.mayo.edu/mayo/research/biostat/splusfunctions.cfm} for Unix, and \url{http://www.stats.ox.ac.uk/pub/MASS3/Winlibs/} for windows.
 }
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ 
 \code{\link{cmx}}, \code{\link{pcc}}, \code{\link{sensitivity}}, \code{\link{specificity}}, \code{\link{Kappa}}, \code{\link{auc.roc.plot}}
 }

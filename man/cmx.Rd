@@ -41,7 +41,7 @@ the confusion matrix is returned in the form of a table where:
 	\item{columns}{observed values}
 	\item{rows}{predicted values}
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
 
 \seealso{

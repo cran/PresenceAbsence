@@ -23,10 +23,9 @@ Percent Correctly Classified is simply the proportion of test observations that 
 [1,1] \tab \code{PCC}       	\tab percent correctly classified            \cr
 [1,2] \tab \code{PCC.sd}     	\tab standard deviation of \code{PCC}          }
 }
-\references{  }
+
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
-\note{ 
-}
+
 \seealso{ \code{\link{cmx}}, \code{\link{sensitivity}}, \code{\link{specificity}}, \code{\link{Kappa}}, \code{\link{auc}}}
 \examples{
 data(SIM3DATA)
