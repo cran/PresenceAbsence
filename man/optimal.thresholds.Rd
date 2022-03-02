@@ -5,7 +5,9 @@
   \code{optimal.thresholds} calculates optimal thresholds for Presence/Absence data by any of several methods.
 }
 \usage{
-optimal.thresholds(DATA = NULL, threshold = 101, which.model = 1:(ncol(DATA)-2), model.names = NULL, na.rm = FALSE, opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, FPC, FNC)
+optimal.thresholds(DATA = NULL, threshold = 101, which.model = 1:(ncol(DATA)-2), 
+model.names = NULL, na.rm = FALSE, opt.methods = NULL, req.sens, req.spec, 
+obs.prev = NULL, smoothing = 1, FPC, FNC)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

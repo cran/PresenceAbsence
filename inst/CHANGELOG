@@ -15,3 +15,15 @@ Fixed spelling error
 ############ PresenceAbsence 1.1.9 (12-08-17) ######################
 
 deleted empty sections in documentation files
+
+############ PresenceAbsence 1.1.10 (22-02-28) ######################
+
+added global functions to NAMESPACE
+fixed typo in R code in demoSIM.R
+fixed title field in DESCRIPTION (removed ending period)
+edited help files so that usage lines were less than 90 characters
+moved citation to inst subdirectory
+fixed citation for JSS article
+removed no longer valid web address for ROC Splus library
+
+

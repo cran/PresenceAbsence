@@ -5,7 +5,14 @@
   Produces a histogram of predicted probabilities with each bar subdivided by observed values. \code{presence.absence.hist} also includes an option to mark several types of optimal thresholds along each plot.
 }
 \usage{
-presence.absence.hist(DATA, which.model = 1, na.rm = FALSE, xlab = "predicted probability", ylab = "number of plots", main = NULL, model.names = NULL, color = NULL, N.bars = 20, truncate.tallest = FALSE, ylim = 1.25 * range(0, apply(counts, 2, sum)),opt.thresholds = NULL, threshold = 101, opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, add.legend = TRUE, legend.text=c("present","absent"), legend.cex = 0.8, add.opt.legend = TRUE, opt.legend.text = NULL, opt.legend.cex = 0.7, pch = NULL, FPC, FNC)
+presence.absence.hist(DATA, which.model = 1, na.rm = FALSE, 
+xlab = "predicted probability", ylab = "number of plots", 
+main = NULL, model.names = NULL, color = NULL, N.bars = 20, 
+truncate.tallest = FALSE, ylim = 1.25 * range(0, apply(counts, 2, sum)),
+opt.thresholds = NULL, threshold = 101, opt.methods = NULL, 
+req.sens, req.spec, obs.prev = NULL, smoothing = 1, add.legend = TRUE, 
+legend.text=c("present","absent"), legend.cex = 0.8, add.opt.legend = TRUE, 
+opt.legend.text = NULL, opt.legend.cex = 0.7, pch = NULL, FPC, FNC)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

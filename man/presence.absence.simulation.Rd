@@ -5,7 +5,8 @@
   \code{presence.absence.simulation} simulates presence/absence data as one set of observed values, and one or more prediction models. First, Observed values are generated as a binomial distribution, then for each model two beta distributions are used to generate predicted values, one beta distribution for the data points where the simulated observed value is present, and a second for points where it is absent. 
 }
 \usage{
-presence.absence.simulation(n, prevalence, N.models = 1, shape1.absent, shape2.absent, shape1.present, shape2.present)
+presence.absence.simulation(n, prevalence, N.models = 1, 
+shape1.absent, shape2.absent, shape1.present, shape2.present)
 }
 \arguments{
   \item{n}{ number of plots (i.e. rows) in simulated dataset }

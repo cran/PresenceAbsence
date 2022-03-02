@@ -3,3 +3,8 @@
 
 # Export all names
 exportPattern(".")
+
+# Import default packages to avoidundifined globals
+  importFrom("graphics", "abline", "barplot", "hist", "legend", "lines",
+             "mtext", "par", "points", "text")
+  importFrom("stats", "qf", "rbeta", "rbinom", "var")

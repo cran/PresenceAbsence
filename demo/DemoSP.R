@@ -103,7 +103,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # Let's get a visual feel for the data. The 'presence.absence.hist' function
 # is a bar plot of observed values as a function predicted probability:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(i in 1:N.sp){
 		for(mod in 1:N.models){
@@ -121,7 +121,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # While we are at it, we will use the 'legend.cex' argument to make the
 # legend more readable:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(i in 1:N.sp){
 		for(mod in 1:N.models){
@@ -146,7 +146,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
  
 #truncate.tallest=FALSE:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("ACGR3","PIEN","POTR5")){
 		for(mod in 2){
@@ -160,7 +160,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 #truncate.tallest=True:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("ACGR3","PIEN","POTR5")){
 		for(mod in 2){
@@ -177,7 +177,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # Compare the histograms for the See5 models for three species with 
 # similar prevalence, but increasing model quality:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("JUSC2","ABCO","PICO")){
 		for(mod in 2){
@@ -304,7 +304,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # these error statistics vary with threshold:
 
 # Selected Species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -314,7 +314,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 		mtext(paste(signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence"),side=3,line=-2,cex=1.2,outer=T)}
 
 # All Species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -349,7 +349,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # A further example:
 
 # Selected species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -359,7 +359,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 		mtext(paste(signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence"),side=3,line=-2,cex=1.2,outer=T)}
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -500,7 +500,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # optimized thresholds as well as add them to the plots:
 
 # Selected Species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3),mar=c(3,3,2,1))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -518,7 +518,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 		mtext(paste(signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence"),side=3,line=-2,cex=1.2,outer=T)}
 
 # All Species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3),mar=c(3,3,2,1))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -552,7 +552,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # You can also add the optimized thresholds to the histogram plots:
 
 # Selected species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,3,0),mfrow=c(2,3))
 	for(sp in c("JUSC2","PICO")){
 		for(mod in 1:N.models){
@@ -577,7 +577,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 		mtext(sp,side=3,line=0,cex=1.5,outer=T)}
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,3,0),mfrow=c(2,3))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -652,7 +652,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # threshold independent method of assessing model performance. 
 
 # Selected species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -662,7 +662,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 					main=paste(sp,"(",signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence )"))}
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -687,7 +687,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # along a ROC plot.
 
 # Single species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	sp="QUGA"
 	DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -697,7 +697,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 				mark=0.5,
 				main=paste(sp,"(",signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence )"))
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	sp="QUGA"
 	DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -709,7 +709,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 				main=paste(sp,"(",signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence )"))
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -720,7 +720,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 					mark=0.5,
 					main=paste(sp,"(",signif(pred.prev$Obs.Prevalence[i],2),"Prevalence )"))}
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0))
 	for(sp in 1:N.sp){
 		sp<-species[i]
@@ -735,7 +735,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 # Even species with the same prevalence can have very different model quality:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("JUSC2","ABCO","PICO")){
 	DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -749,7 +749,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # we will split the models onto separate plots:
 
 # Selected species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3),mar=c(3,4,2,1))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -768,7 +768,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3),mar=c(3,4,2,1))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -815,7 +815,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # may produce more useful diagnostics.)
 
 # Selected species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -828,7 +828,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 		mtext(paste(signif(pred.prev[species==sp,]$Obs.Prevalence,2),"Prevalence"),side=3,line=-2,cex=1.2,outer=T)}
 
 # All species:
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,3))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -850,7 +850,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 # For a selected species/model:
 
 	mod<-1
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mar=c(3,10,4,10))
 	for(sp in c("JUSC2","PICO")){
 		DATA=SPDATA[SPDATA$SPECIES==sp,]
@@ -865,7 +865,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 # For all species and models:
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mar=c(3,10,4,10))
 	for(i in 1:N.sp){
 		sp<-species[i]
@@ -939,7 +939,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 	### Make Graph ### 
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 
 	pch.prevalence<-c(1,2,3)
 	col.prevalence<-(1:N.models)+1
@@ -999,7 +999,7 @@ library(PresenceAbsence)# Next go to the command window and simply type:
 
 # Make Graph # 
 
-	windows(width=9,height=6,pointsize=12,record=TRUE)
+	dev.new(width=9,height=6,pointsize=12,record=TRUE)
 	op<-par(mfrow=c(3,4),cex=.8,oma=c(3,2,3,0),mar=c(3,3,3,1),pty="s",cex=.7)
 	for(opt.meth in opt.methods){
 		plot(	c(0,.6),c(0,.6),xlab="",ylab="",xlim=c(0,.6),ylim=c(0,.6),type="n")

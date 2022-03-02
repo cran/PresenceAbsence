@@ -40,7 +40,7 @@ If observed values are all the same, in other words, if the data consists entire
 \references{ 
 DeLong, E.R., Delong, D.M. and Clarke-Pearson, D.L., 1988. Comparing areas under two or more correlated Receiver Operating Characteristic curves: a nonparametric approach. Biometrics, 44(3):837-845.
 
-Splus ROC library developed by Beth Atkinson and Doug Mahoney at the Mayo Clinic is available at: \url{http://mayoresearch.mayo.edu/mayo/research/biostat/splusfunctions.cfm} for Unix, and \url{http://www.stats.ox.ac.uk/pub/MASS3/Winlibs/} for windows.
+Splus ROC library developed by Beth Atkinson and Doug Mahoney at the Mayo Clinic is available at: \url{http://www.stats.ox.ac.uk/pub/MASS3/Winlibs/} for windows.
 }
 \author{ Elizabeth Freeman \email{eafreeman@fs.fed.us} }
 

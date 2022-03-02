@@ -5,7 +5,12 @@
   Produces four types of Presence/Absence accuracy plots for a single set of model Predictions.
 }
 \usage{
-presence.absence.summary(DATA, threshold = 101, find.auc = TRUE, which.model = 1, na.rm = FALSE, main = NULL, model.names = NULL, alpha = 0.05, N.bins = 5, N.bars = 10, truncate.tallest = FALSE, opt.thresholds = NULL, opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, vert.lines = FALSE, add.legend = TRUE, add.opt.legend=TRUE, legend.cex = 0.6, opt.legend.cex = 0.6, pch = NULL, FPC, FNC, cost.line = FALSE)
+presence.absence.summary(DATA, threshold = 101, find.auc = TRUE, which.model = 1, 
+na.rm = FALSE, main = NULL, model.names = NULL, alpha = 0.05, N.bins = 5, N.bars = 10, 
+truncate.tallest = FALSE, opt.thresholds = NULL, opt.methods = NULL, req.sens, req.spec, 
+obs.prev = NULL, smoothing = 1, vert.lines = FALSE, add.legend = TRUE, 
+add.opt.legend=TRUE, legend.cex = 0.6, opt.legend.cex = 0.6, pch = NULL, 
+FPC, FNC, cost.line = FALSE)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

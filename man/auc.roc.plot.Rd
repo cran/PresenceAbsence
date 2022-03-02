@@ -5,7 +5,17 @@
   \code{auc.roc.plot} creates a ROC plot for one dataset and one or more model predictions. Prints AUC for each model as part of the legend. \code{auc.roc.plot} also includes an option to mark several types of optimal thresholds along each ROC plot.
 }
 \usage{
-auc.roc.plot(DATA, threshold = 101, find.auc = TRUE, which.model = (1:(ncol(DATA) - 2)), na.rm = FALSE, xlab = "1-Specificity (false positives)", ylab = "Sensitivity (true positives)", main = "ROC Plot", model.names = NULL, color = NULL, line.type = NULL, lwd = 1, mark = 0, mark.numbers = TRUE, mark.color = NULL, opt.thresholds = NULL, opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, add.legend = TRUE, legend.text = model.names, legend.cex = 0.8, add.opt.legend = TRUE, opt.legend.text = NULL, opt.legend.cex = 0.7, counter.diagonal = FALSE, pch = NULL, FPC, FNC, cost.line = FALSE)
+auc.roc.plot(DATA, threshold = 101, find.auc = TRUE, 
+which.model = (1:(ncol(DATA) - 2)), na.rm = FALSE, 
+xlab = "1-Specificity (false positives)", 
+ylab = "Sensitivity (true positives)", main = "ROC Plot", 
+model.names = NULL, color = NULL, line.type = NULL, lwd = 1, 
+mark = 0, mark.numbers = TRUE, mark.color = NULL, 
+opt.thresholds = NULL, opt.methods = NULL, req.sens, 
+req.spec, obs.prev = NULL, smoothing = 1, add.legend = TRUE, 
+legend.text = model.names, legend.cex = 0.8, add.opt.legend = TRUE, 
+opt.legend.text = NULL, opt.legend.cex = 0.7, 
+counter.diagonal = FALSE, pch = NULL, FPC, FNC, cost.line = FALSE)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

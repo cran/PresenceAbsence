@@ -5,7 +5,8 @@
   Calculates five accuracy measures (pcc, sensitivity, specificity, Kappa, and AUC) for Presence/Absence data, and (optionally) their associated standard deviations.
 }
 \usage{
-presence.absence.accuracy(DATA, threshold = 0.5, find.auc = TRUE, st.dev = TRUE, which.model = (1:(ncol(DATA) - 2)), na.rm = FALSE)
+presence.absence.accuracy(DATA, threshold = 0.5, find.auc = TRUE, st.dev = TRUE, 
+which.model = (1:(ncol(DATA) - 2)), na.rm = FALSE)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

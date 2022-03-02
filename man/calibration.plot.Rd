@@ -5,7 +5,10 @@
   \code{calibration.plot} produces a goodness-of-fit plot for Presence/Absence data.
 }
 \usage{
-calibration.plot(DATA, which.model = 1, na.rm = FALSE, alpha = 0.05, N.bins = 5, xlab = "Predicted Probability of Occurrence", ylab = "Observed Occurrence as Proportion of Sites Surveyed", main = NULL, color= NULL, model.names= NULL)
+calibration.plot(DATA, which.model = 1, na.rm = FALSE, alpha = 0.05, N.bins = 5, 
+xlab = "Predicted Probability of Occurrence", 
+ylab = "Observed Occurrence as Proportion of Sites Surveyed", 
+main = NULL, color= NULL, model.names= NULL)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:

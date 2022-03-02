@@ -456,7 +456,7 @@ par(op)
 # ROC plots, with their associated AUC (Area Under the Curve) provide a
 # threshold independent method of assessing model performance. 
 
-	windows(width=9,height=5,pointsize=12,record=TRUE)
+	dev.new(width=9,height=5,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,2))
 
 	auc.roc.plot(	DATA=SPlow, 
@@ -486,7 +486,7 @@ par(op)
 #
 # The argument 'mark' can be used to label particular thresholds along the ROC curve:
 
-	windows(width=9,height=5,pointsize=12,record=TRUE)
+	dev.new(width=9,height=5,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,2))
 
 	auc.roc.plot(	DATA=SPlow, 
@@ -509,7 +509,7 @@ par(op)
 # the argument 'optimal.thresholds' will mark the optimized thresholds from
 # 'error.threshold.plot' along the ROC curves:
 
-	windows(width=9,height=5,pointsize=12,record=TRUE)
+	dev.new(width=9,height=5,pointsize=12,record=TRUE)
 	par(oma=c(0,0,5,0),mfrow=c(1,2))
 
 	auc.roc.plot(	DATA=SPlow, 

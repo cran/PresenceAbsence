@@ -6,14 +6,14 @@
 Presence-Absence model evaluation 
 }
 \description{
-This package provides a set of functions useful when evaluating the results of presence-absence models. Package includes functions for calculating threshold dependent measures such as confusion matrices, pcc, sensitivity, specificity, and Kappa, and produces plots of each measure as the threshold is varied. It also includes functions to plot the threshold independent ROC curves along with the associated AUC (area under the curve).
+Provides a set of functions useful when evaluating the results of presence-absence models. Package includes functions for calculating threshold dependent measures such as confusion matrices, pcc, sensitivity, specificity, and Kappa, and produces plots of each measure as the threshold is varied. It also includes functions to plot the threshold independent ROC curves along with the associated AUC (area under the curve).
 }
 \details{
 \tabular{ll}{
 Package: \tab PresenceAbsence\cr
 Type: \tab Package\cr
-Version: \tab 1.1.9\cr
-Date: \tab 2012-08-17\cr
+Version: \tab 1.1.10\cr
+Date: \tab 2022-02-28\cr
 License: \tab This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.\cr
 }
 This library provides a collection of functions useful for evaluating Presence/Absence data, both analytically as well as graphically. It also includes a function that uses beta distributions to produce simulated Presence/Absence data.
@@ -39,7 +39,7 @@ Note that this library provides graphical and tabular comparisons between models
 This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.
 }
 \author{
-Author:Elizabeth Freeman <eafreeman@fs.fed.us>
+Author:Elizabeth Freeman <elizabeth.a.freeman@usda.gov>
 
 Maintainer: Elizabeth Freeman <eafreeman@fs.fed.us>
 }

@@ -5,7 +5,13 @@
   \code{error.threshold.plot} takes a single model and plots the sensitivity and specificity as a function of threshold. It will optionally add other error statistics such as PCC and/or Kappa to the plot. Optionally, it will also optimize the choice of threshold by several criteria, return the results as a dataframe, and mark the optimized thresholds on the plot.
 }
 \usage{
-error.threshold.plot(DATA, threshold = 101, which.model = 1, na.rm = FALSE, xlab = "Threshold", ylab = "Accuracy Measures", main = NULL, model.names = NULL, color = NULL, line.type = NULL, lwd = 1, plot.it = TRUE, opt.thresholds = NULL, opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, vert.lines = FALSE, add.legend = TRUE, legend.text = legend.names, legend.cex = 0.8, add.opt.legend = TRUE, opt.legend.text = NULL, opt.legend.cex = 0.7, pch = NULL, FPC, FNC)
+error.threshold.plot(DATA, threshold = 101, which.model = 1, na.rm = FALSE, 
+xlab = "Threshold", ylab = "Accuracy Measures", main = NULL, model.names = NULL, 
+color = NULL, line.type = NULL, lwd = 1, plot.it = TRUE, opt.thresholds = NULL, 
+opt.methods = NULL, req.sens, req.spec, obs.prev = NULL, smoothing = 1, 
+vert.lines = FALSE, add.legend = TRUE, legend.text = legend.names, 
+legend.cex = 0.8, add.opt.legend = TRUE, opt.legend.text = NULL, 
+opt.legend.cex = 0.7, pch = NULL, FPC, FNC)
 }
 \arguments{
   \item{DATA}{a matrix or dataframe of observed and predicted values where each row represents one plot and where columns are:
@@ -91,10 +97,11 @@ data(SIM3DATA)
 
 error.threshold.plot(SIM3DATA,opt.methods=c(1,2,5))
 
-error.threshold.plot(	SIM3DATA, 
-				which.model=2, 
-				opt.thresholds=TRUE, 
-				opt.methods=c("Default", "Sens=Spec", "MinROCdist"), 					vert.lines=TRUE)
+error.threshold.plot( SIM3DATA, 
+                      which.model=2, 
+                      opt.thresholds=TRUE, 
+		      opt.methods=c("Default", "Sens=Spec", "MinROCdist"), 
+                      vert.lines=TRUE)
 
 
 error.threshold.plot(	SIM3DATA,
