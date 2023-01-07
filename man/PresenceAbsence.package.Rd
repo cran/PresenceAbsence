@@ -12,8 +12,8 @@ Provides a set of functions useful when evaluating the results of presence-absen
 \tabular{ll}{
 Package: \tab PresenceAbsence\cr
 Type: \tab Package\cr
-Version: \tab 1.1.10\cr
-Date: \tab 2022-02-28\cr
+Version: \tab 1.1.11\cr
+Date: \tab 2023-01-05\cr
 License: \tab This code was written and prepared by a U.S. Government employee on official time, and therefore it is in the public domain and not subject to copyright.\cr
 }
 This library provides a collection of functions useful for evaluating Presence/Absence data, both analytically as well as graphically. It also includes a function that uses beta distributions to produce simulated Presence/Absence data.
@@ -41,7 +41,7 @@ This code was written and prepared by a U.S. Government employee on official tim
 \author{
 Author:Elizabeth Freeman <elizabeth.a.freeman@usda.gov>
 
-Maintainer: Elizabeth Freeman <eafreeman@fs.fed.us>
+Maintainer: Elizabeth Freeman <elizabeth.a.freeman@usda.gov>
 }
 \references{
 Fielding, A.H. and Bell, J.F., 1997. A review of methods for the assessment of prediction errors in conservation presence/absence models. Environ. Conserv., 24(1):38-49.
